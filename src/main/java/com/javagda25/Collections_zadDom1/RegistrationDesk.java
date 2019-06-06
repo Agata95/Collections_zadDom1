@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@EqualsAndHashCode
 
 public class RegistrationDesk {
 
@@ -24,7 +25,7 @@ public class RegistrationDesk {
     public RegistrationRequest getRequest(long requestId, List<RegistrationRequest> registrationRequests) {
         requestId = registrationRequest.getIdWizyty();
         for (RegistrationRequest a : registrationRequests) {
-            if (a.getIdWizyty() == requestId) {
+            if (a.getIdWizyty() == (requestId)) {
                 return a;
             } else {
                 System.out.println("Nie ma tekiego ID w rejestrze");
